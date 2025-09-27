@@ -15,10 +15,10 @@ sidebar_position: 2
 
 | 요소 | 설명 |
 | --- | --- |
-| ⚛️ **A - Atomicity (원자성)** | 작업은 **전부 성공 or 전부 실패**, 중간 없음 |
-| 🧷 **C - Consistency (일관성)** | 트랜잭션 전후의 **데이터 상태는 일관**되어야 함 |
-| 🧍‍♂️ **I - Isolation (격리성)** | 동시에 수행되는 트랜잭션 간 **서로 간섭 X** |
-| 🪵 **D - Durability (지속성)** | 커밋된 결과는 **영구 반영**, 장애 발생에도 보존 |
+| **A - Atomicity (원자성)** | 작업은 **전부 성공 or 전부 실패**, 중간 없음 |
+| **C - Consistency (일관성)** | 트랜잭션 전후의 **데이터 상태는 일관**되어야 함 |
+| **I - Isolation (격리성)** | 동시에 수행되는 트랜잭션 간 **서로 간섭 X** |
+| **D - Durability (지속성)** | 커밋된 결과는 **영구 반영**, 장애 발생에도 보존 |
 
 ---
 
@@ -50,10 +50,10 @@ sidebar_position: 2
 
 | 수준 | 허용되는 현상 | 설명 |
 | --- | --- | --- |
-| 🔓 **Read Uncommitted** | Dirty Read | 커밋되지 않은 데이터 읽음 (가장 낮은 격리) |
-| 👀 **Read Committed** | - | 커밋된 데이터만 읽음 (Dirty Read 방지) |
-| 🔁 **Repeatable Read** | Phantom Read | 같은 쿼리 결과가 다르게 나오는 것 방지 (하지만 팬텀 리드는 발생 가능) |
-| 🧱 **Serializable** | 없음 | 가장 높은 격리. 트랜잭션을 순차적으로 실행한 것과 동일 (성능 저하 심함) |
+| **Read Uncommitted** | Dirty Read | 커밋되지 않은 데이터 읽음 (가장 낮은 격리) |
+| **Read Committed** | - | 커밋된 데이터만 읽음 (Dirty Read 방지) |
+| **Repeatable Read** | Phantom Read | 같은 쿼리 결과가 다르게 나오는 것 방지 (하지만 팬텀 리드는 발생 가능) |
+| **Serializable** | 없음 | 가장 높은 격리. 트랜잭션을 순차적으로 실행한 것과 동일 (성능 저하 심함) |
 
 ---
 
@@ -61,16 +61,16 @@ sidebar_position: 2
 
 | 현상 | 설명 |
 | --- | --- |
-| ❗ Dirty Read | 다른 트랜잭션의 **미커밋 데이터**를 읽음 |
-| 🔄 Non-Repeatable Read | 같은 쿼리를 두 번 실행했는데 **결과가 다름** |
-| 👻 Phantom Read | 조건은 같지만 **결과 집합의 행 개수가 다름** |
+| Dirty Read | 다른 트랜잭션의 **미커밋 데이터**를 읽음 |
+| Non-Repeatable Read | 같은 쿼리를 두 번 실행했는데 **결과가 다름** |
+| Phantom Read | 조건은 같지만 **결과 집합의 행 개수가 다름** |
 
 ---
 
 ### ⚖️ 격리 수준 선택 팁
 
 - 읽기 성능이 중요 → **Read Committed** (기본값인 경우 많음)
-- 정확성 중요 (금융 등) → **Serializable**
+- 정확성 중요 → **Serializable**
 - 대부분의 RDB는 **Read Committed or Repeatable Read** 사용
 
 ---
