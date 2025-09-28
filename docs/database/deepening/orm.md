@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # ORM
 
-## 🔍 Object-Relational Mapping 개념
+## Object-Relational Mapping 개념
 
 > 객체지향 언어의 **클래스 ↔ 관계형 DB 테이블** 매핑 기술 → 객체 기반 코드로 DB 조작 가능하도록 하는 **추상화 계층**
 

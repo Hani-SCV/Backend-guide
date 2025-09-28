@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Transaction
 
-## 🔍 트랜잭션 개념
+## 트랜잭션 개념
 
 > **하나의 논리적 작업 단위**  
 > 여러 DB 연산을 묶어 **모두 성공 or 전부 실패 (Rollback)**  
