@@ -1,0 +1,8 @@
+{
+  "label": "DB Deeping",
+  "position": 6,
+  "link": {
+    "type": "generated-index",
+    "description": "데이터베이스에 대한 심화 내용을 다룹니다."
+  }
+}
