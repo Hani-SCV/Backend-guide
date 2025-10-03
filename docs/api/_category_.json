@@ -1,0 +1,8 @@
+{
+  "label": "API",
+  "position": 10,
+  "link": {
+    "type": "generated-index",
+    "description": "REST API의 기본 원칙과 JSON API 표준 규격을 설명합니다."
+  }
+}
