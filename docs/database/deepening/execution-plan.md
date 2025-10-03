@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # 실행 계획과 쿼리 최적화
 
-## 실행 계획 (Execution Plan)
+### 실행 계획 (Execution Plan)
 
 > 쿼리 수행 시 **DB 엔진이 선택한 실행 절차**  
 > 어떤 테이블을 어떤 방식으로 읽고, 어떤 인덱스를 쓰는지 명시
