@@ -1,0 +1,97 @@
+---
+sidebar_position: 1
+---
+
+# 쿠키 기반 인증
+
+### 🔍 개념
+
+> 쿠키는 서버가 클라이언트에 발급하는 소량의 데이터  
+> 주로 세션 ID를 저장해 사용자 인증 상태를 유지  
+> 클라이언트는 이후 요청에 해당 쿠키를 자동 전송
+
+### ⚙️ 동작 흐름
+
+1. 클라이언트 → 서버: 로그인 요청 (예: POST /api/login)
+2. 서버: 자격 증명 확인 후 세션 ID 생성
+3. 서버 → 클라이언트: Set-Cookie: sessionId=abc; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=3600
+4. 클라이언트: 이후 모든 요청에 브라우저가 자동으로 sessionId 전송
+5. 서버: 세션 저장소(메모리·Redis 등)에서 세션 ID 조회 → 사용자 정보 로드
+
+### 🔑 주요 속성
+
+- HttpOnly → JavaScript 접근 차단
+- Secure → HTTPS 연결에서만 전송
+- SameSite → CSRF 방지 (Strict / Lax / None)
+- Max-Age / Expires → 만료 시간 지정
+- Path / Domain → 쿠키 적용 경로·도메인 범위
+
+### ✅ 장점
+
+- 브라우저가 자동으로 쿠키 관리
+- 클라이언트 저장소 코드 간소화
+- SameSite 설정으로 CSRF 방어
+
+### ⚠️ 단점
+
+- 서버에 세션 상태 저장 필요 → 수평 확장 시 분산 세션 스토어(예: Redis) 구성
+- CSRF, 세션 탈취 위험
+- API 소비자(모바일 앱·서버 간 호출) 지원 시 별도 처리
+
+### 🔒 보안 고려사항
+
+- HTTPS 필수 적용
+- HttpOnly + Secure + SameSite 설정
+- 로그인·권한 변경 시 세션 ID 재발급하여 세션 고정(Session Fixation) 방지
+- 세션 만료 관리 및 비정상 세션 재생 방지 로직
+- 세션 저장소 접근 제어 및 암호화
+
+### 🛠 세션 저장소 전략
+
+- 인메모리(단일 서버) → 간단하지만 서버 재시작·스케일 아웃 취약
+- Redis·Memcached 분산 캐시 → 빠른 조회, TTL 지원
+- 데이터베이스 테이블 저장 → 영속성 확보, 성능 고려
+
+### 🔄 세션 확장성
+
+- 로드밸런서 Sticky Session 사용 → 요청 일관성 보장 but 서버 이탈 시 문제
+- 분산 세션 스토어(Redis) 활용 → 어느 서버로 가도 세션 조회 가능
+- JWT 등 무상태 토큰과 조합 → 세션 오버헤드 감소
+
+### ⚙️ 간단 코드 예시 (Express + Redis)
+
+```
+// 서버 설정
+const session = require('express-session')
+const RedisStore = require('connect-redis')(session)
+app.use(session({
+  store: new RedisStore({ client: redisClient }),
+  secret: 'your-secret',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    secure: true,
+    sameSite: 'lax',
+    maxAge: 3600000
+  }
+}))
+
+// 로그인 핸들러
+app.post('/login', async (req, res) => {
+  const user = await authenticate(req.body)
+  if (user) {
+    req.session.userId = user.id
+    res.json({ result: 'ok' })
+  } else {
+    res.status(401).json({ error: 'invalid credentials' })
+  }
+})
+```
+
+### 🚀 Tip
+
+- 세션 데이터는 최소화(사용자 ID 등)
+- TTL 만료 + 슬라이딩 세션(활동 시 만료 시간 갱신)
+- 주기적 세션 클리닝(Idle 세션 제거)
+- 로그아웃 시 세션 삭제 및 쿠키 만료 헤더 반환
