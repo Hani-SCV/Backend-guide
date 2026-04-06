@@ -1,8 +1,8 @@
 {
   "label": "PostgreSQL",
-  "position": 8,
+  "position": 70,
   "link": {
     "type": "generated-index",
-    "description": "PostgreSQL에 대한 개요와 주요 기능"
+    "description": "PostgreSQL에 관한 문서 모음입니다."
   }
 }
