@@ -47,12 +47,12 @@ slug: "/api/rest-api"
 
 ### URI 설계 원칙
 
-- 리소스는 명사로: /users, /orders/123
-- 계층적 관계: /users/{userId}/orders
-- 소문자 · 하이픈: /order-items
+- 리소스는 명사로: `/users, /orders/123`
+- 계층적 관계: `/users/{userId}/orders`
+- 소문자 · 하이픈: `/order-items`
 - 필터링·정렬·페이징은 쿼리 파라미터
 
-    GET /products?category=books&sort=-price&page=2&size=20
+    GET `/products?category=books&sort=-price&page=2&size=20`
 
 
 ---
