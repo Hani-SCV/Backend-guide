@@ -7,10 +7,6 @@ Notion에 작성한 문서를 자동으로 Docusaurus로 변환하여 정적 사
 
 ```bash
 npm run start
-## Local Start
-
-```bash
-npm run start
 ```
 
 ## Notion Sync
