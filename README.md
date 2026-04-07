@@ -1,125 +1,57 @@
 # Web Backend-Guide
 
-Docusaurus 를 이용한 웹 백엔드 개발자 가이드 문서 입니다.
+Notion API, Docusaurus, Netlify를 기반으로 한 웹 백엔드 가이드입니다.  
+Notion에 작성한 문서를 자동으로 Docusaurus로 변환하여 정적 사이트로 배포합니다.
 
-### Start
+## Local Start
+
 ```bash
-    npm run start
+npm run start
+## Local Start
+
+```bash
+npm run start
 ```
 
----
-## 디렉토리 구조
+## Notion Sync
 
+```bash
+# 노션 가이드 최신 갱신
+npm run notion:sync
 ```
-Backend-guide
-├─ docs
-│  ├─ database
-│  │  ├─ database-basics.md
-│  │  ├─ sql-basic-queries.md
-│  │  └─ _category_.json
-│  ├─ git
-│  │  ├─ advanced.md
-│  │  ├─ basics.md
-│  │  ├─ branching.md
-│  │  ├─ commands.md
-│  │  ├─ remote.md
-│  │  └─ _category_.json
-│  ├─ index.md
-│  ├─ internet
-│  │  ├─ browser
-│  │  │  ├─ overview.md
-│  │  │  └─ _category_.json
-│  │  ├─ core-concepts
-│  │  │  ├─ client-server.md
-│  │  │  ├─ data-transfer.md
-│  │  │  ├─ http-https.md
-│  │  │  ├─ ip-domain.md
-│  │  │  ├─ isp.md
-│  │  │  ├─ packet-switching.md
-│  │  │  ├─ router-routing.md
-│  │  │  ├─ tcp-ip.md
-│  │  │  └─ _category_.json
-│  │  ├─ dns
-│  │  │  ├─ caching.md
-│  │  │  ├─ how-it-works.md
-│  │  │  ├─ importance.md
-│  │  │  ├─ server-types.md
-│  │  │  └─ _category_.json
-│  │  ├─ hosting
-│  │  │  ├─ overview.md
-│  │  │  └─ _category_.json
-│  │  └─ _category_.json
-│  ├─ mongodb
-│  │  ├─ advanced.md
-│  │  ├─ basics.md
-│  │  ├─ clustering.md
-│  │  ├─ integration.md
-│  │  ├─ modeling.md
-│  │  ├─ overview.md
-│  │  ├─ performance.md
-│  │  ├─ security.md
-│  │  ├─ setup.md
-│  │  └─ _category_.json
-│  ├─ mysql
-│  │  ├─ advanced-features.md
-│  │  ├─ backup-recovery.md
-│  │  ├─ basics.md
-│  │  ├─ other-technologies-integration.md
-│  │  ├─ performance-optimization.md
-│  │  ├─ replication-clustering.md
-│  │  ├─ security-management.md
-│  │  ├─ setup.md
-│  │  ├─ transaction-management.md
-│  │  └─ _category_.json
-│  ├─ os
-│  │  ├─ io-management.md
-│  │  ├─ ipc.md
-│  │  ├─ memory-management.md
-│  │  ├─ network-basics.md
-│  │  ├─ overview.md
-│  │  ├─ posix-basics.md
-│  │  ├─ process-management.md
-│  │  ├─ threads-concurrency.md
-│  │  └─ _category_.json
-│  ├─ postgresql
-│  │  ├─ advanced-features.md
-│  │  ├─ backup-recovery.md
-│  │  ├─ data-types.md
-│  │  ├─ functions-triggers.md
-│  │  ├─ overview.md
-│  │  ├─ query-optimization.md
-│  │  ├─ security.md
-│  │  ├─ transaction-locks.md
-│  │  └─ _category_.json
-│  └─ python
-│     ├─ basics.md
-│     ├─ coding-style.md
-│     └─ _category_.json
-├─ docusaurus.config.js
-├─ package-lock.json
-├─ package.json
-├─ README.md
-├─ sidebars.js
-├─ src
-│  ├─ components
-│  │  └─ HomepageFeatures
-│  │     ├─ index.js
-│  │     └─ styles.module.css
-│  ├─ css
-│  │  └─ custom.css
-│  └─ pages
-│     ├─ index.js
-│     ├─ index.module.css
-│     └─ markdown-page.md
-└─ static
-   ├─ .nojekyll
-   └─ img
-      ├─ docusaurus-social-card.jpg
-      ├─ docusaurus.png
-      ├─ favicon.ico
-      ├─ logo.svg
-      ├─ undraw_docusaurus_mountain.svg
-      ├─ undraw_docusaurus_react.svg
-      └─ undraw_docusaurus_tree.svg
 
+## Build
+
+```bash
+# 패키지 빌드
+npm run build
 ```
+
+## Project Structure
+
+docs/ # Docusaurus 문서
+scripts/ # Notion sync 스크립트
+src/ # 사이트 코드
+
+## Environment Variables
+
+다음 값을 설정해야 합니다.
+
+- NOTION_TOKEN
+- NOTION_PAGE_ID
+
+로컬에서는 `.env` 파일을 사용하고,  
+배포 환경에서는 GitHub Actions Secrets를 사용합니다.
+
+## Workflow
+
+1. Notion에 문서 작성
+2. GitHub Actions가 주기적으로 실행
+3. Notion 데이터를 Markdown으로 변환
+4. docs/에 반영 후 자동 커밋
+5. Netlify가 빌드 및 배포
+
+## Deployment
+
+Netlify를 통해 자동 배포됩니다.  
+GitHub 저장소와 연동되어 변경 시 자동으로 빌드됩니다.
