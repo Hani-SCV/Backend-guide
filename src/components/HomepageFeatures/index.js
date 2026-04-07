@@ -1,11 +1,14 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Mountain from '@site/static/img/undraw_docusaurus_mountain.svg';
+import Tree from '@site/static/img/undraw_docusaurus_tree.svg';
+import ReactSvg from '@site/static/img/undraw_docusaurus_react.svg';
 
 const FeatureList = [
   {
     title: 'Internet',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: Mountain,
     description: (
       <>
         전 세계의 컴퓨터와 네트워크를 연결하여 데이터를 주고받는 거대한 통신망
@@ -14,7 +17,7 @@ const FeatureList = [
   },
   {
     title: 'OS',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: Tree,
     description: (
       <>
         컴퓨터 하드웨어와 소프트웨어를 관리하는 시스템.
@@ -23,7 +26,7 @@ const FeatureList = [
   },
   {
     title: 'Git',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: ReactSvg,
     description: (
       <>
         소스 코드의 버전 관리를 위한 분산 버전 관리 시스템.

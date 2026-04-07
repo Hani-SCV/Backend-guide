@@ -1,8 +1,0 @@
-{
-  "label": "MySQL",
-  "position": 7,
-  "link": {
-    "type": "generated-index",
-    "description": "MySQL의 기본 개념, 설치 및 설정, 트랜잭션 관리, 성능 최적화 등 MySQL에 대한 전반적인 내용을 다룹니다."
-  }
-}

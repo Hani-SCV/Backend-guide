@@ -1,8 +1,8 @@
 {
   "label": "Python",
-  "position": 5,
+  "position": 40,
   "link": {
     "type": "generated-index",
-    "description": "Python 기본 개념과 코딩 스타일에 대한 설명"
+    "description": "Python에 관한 문서 모음입니다."
   }
 }

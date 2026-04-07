@@ -1,0 +1,8 @@
+{
+  "label": "메시지 브로커",
+  "position": 190,
+  "link": {
+    "type": "generated-index",
+    "description": "메시지 브로커에 관한 문서 모음입니다."
+  }
+}
