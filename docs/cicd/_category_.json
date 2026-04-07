@@ -1,0 +1,8 @@
+{
+  "label": "CI/CD",
+  "position": 150,
+  "link": {
+    "type": "generated-index",
+    "description": "CI/CD에 관한 문서 모음입니다."
+  }
+}
