@@ -5,10 +5,13 @@ slug: "/nosql-mongodb/mongodb-클러스터링"
 ---
 
 
-> 💡 MongoDB는 고가용성(High Availability)과 확장성(Scalability)을 제공하기 위해 **Replica Set**과 **Sharding** 두 가지 클러스터링 방법을 지원합니다. 이 챕터에서는 MongoDB 클러스터링을 설정하는 방법과 각 기능의 특징을 다룹니다.
-
-
 ---
+
+
+## 개념 
+
+
+> MongoDB는 고가용성(High Availability)과 확장성(Scalability)을 제공하기 위해 **Replica Set**과 **Sharding** 두 가지 클러스터링 방법을 지원합니다. 이 챕터에서는 MongoDB 클러스터링을 설정하는 방법과 각 기능의 특징을 다룹니다.
 
 
 ### **Replica Set**
@@ -44,9 +47,6 @@ rs.status()
 ```
 
 
----
-
-
 ### **Sharding**
 
 
@@ -71,9 +71,6 @@ sh.shardCollection("myDatabase.myCollection", { "shardKey": 1 })
 
 - **Shard Key**는 데이터를 분산하는 기준이 되는 필드입니다. Shard Key는 데이터를 균등하게 분배할 수 있도록 잘 선택해야 합니다.
 
----
-
-
 ### **Sharding과 Replica Set 결합**
 
 
@@ -83,9 +80,6 @@ MongoDB에서는 **Replica Set**과 **Sharding**을 결합하여 사용 가능
 ### **Shard 서버의 Replica Set 구성**
 
 - 각 Shard 서버는 Replica Set으로 구성하여 데이터의 고가용성 및 안정성을 높입니다.
-
----
-
 
 ### **MongoDB 클러스터링의 장점**
 

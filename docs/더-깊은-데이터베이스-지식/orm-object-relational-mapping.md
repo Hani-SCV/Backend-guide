@@ -25,9 +25,6 @@ slug: "/더-깊은-데이터베이스-지식/orm-object-relational-mapping"
 - 코드 재사용성, 유지보수성 증가
 - DB 독립성 확보 (교체 유연)
 
----
-
-
 ### 대표 ORM 프레임워크
 
 
@@ -38,9 +35,6 @@ slug: "/더-깊은-데이터베이스-지식/orm-object-relational-mapping"
 | JS/TS  | Sequelize, TypeORM, Prisma      |
 
 
----
-
-
 ### 장점
 
 - 객체지향(OOP) 설계 유지
@@ -48,18 +42,12 @@ slug: "/더-깊은-데이터베이스-지식/orm-object-relational-mapping"
 - 트랜잭션/연결 등 자동 처리
 - 도메인 모델 기반 개발 용이
 
----
-
-
 ### 단점
 
 - 복잡한 SQL(JOIN, GROUP BY 등) 비효율
 - **N+1 문제**, **지연 vs 즉시 로딩 이슈**
 - 내부 동작 이해 부족 시 성능 저하 발생
 - 추상화 → 디버깅 어려움
-
----
-
 
 ### 핵심 키워드
 
@@ -70,9 +58,6 @@ slug: "/더-깊은-데이터베이스-지식/orm-object-relational-mapping"
 - Lazy Loading / Eager Loading
 - N+1 문제
 - 영속성 컨텍스트 (Persistence Context)
-
----
-
 
 ### 주요 매핑 관계 (기본만 정리)
 
@@ -89,9 +74,6 @@ slug: "/더-깊은-데이터베이스-지식/orm-object-relational-mapping"
 - `mappedBy`
 - `fetch = FetchType.LAZY`
 - `cascade = CascadeType.ALL`
-
----
-
 
 ### 클래스 ↔ 테이블 매핑 예시
 

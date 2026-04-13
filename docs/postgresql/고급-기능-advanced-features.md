@@ -30,9 +30,6 @@ SELECT * FROM view_name;
 ```
 
 
----
-
-
 ### **물리적 설계 (Partitioning)**
 
 - **파티셔닝**은 큰 테이블을 작은 논리적 단위로 분할하여 관리할 수 있도록 하는 기능.
@@ -59,9 +56,6 @@ CREATE TABLE orders_2021 PARTITION OF orders FOR VALUES FROM ('2021-01-01') TO (
 ```
 
 
----
-
-
 ### **커스텀 데이터 타입 (Custom Data Types)**
 
 - **커스텀 데이터 타입**은 PostgreSQL에서 제공하는 기본 데이터 타입 외에 사용자가 정의한 데이터 타입.
@@ -73,9 +67,6 @@ CREATE TABLE orders_2021 PARTITION OF orders FOR VALUES FROM ('2021-01-01') TO (
 ```sql
 CREATE TYPE color AS ENUM ('red', 'green', 'blue');
 ```
-
-
----
 
 
 ### **외부 데이터 (Foreign Data Wrappers)**
@@ -101,9 +92,6 @@ CREATE FOREIGN TABLE foreign_table (
 ) SERVER foreign_server
   OPTIONS (schema_name 'public', table_name 'remote_table');
 ```
-
-
----
 
 
 ### **집계 함수 (Aggregate Functions)**
@@ -134,9 +122,6 @@ CREATE AGGREGATE array_agg_custom (ANYELEMENT)
 ```
 
 
----
-
-
 ### **시간 여행 (Temporal Tables)**
 
 - **시스템 버전 관리 테이블**을 사용하여 데이터를 시간에 따라 추적할 수 있음.
@@ -153,9 +138,6 @@ CREATE TABLE my_table (
   valid_to TIMESTAMP WITHOUT TIME ZONE
 );
 ```
-
-
----
 
 
 ### **비동기 처리 (Asynchronous Processing)**
@@ -175,9 +157,6 @@ NOTIFY my_event;
 ```
 
 
----
-
-
 ### **확장 (Extensions)**
 
 - **확장**은 PostgreSQL의 기능을 확장하는 방법으로, 추가적인 기능을 쉽게 추가할 수 있음.
@@ -195,9 +174,6 @@ SELECT * FROM pg_trgm.show_trgm('hello');
 ```
 
 
----
-
-
 ### **트랜잭션 관리 고급 기능**
 
 - **SAVEPOINT**: 트랜잭션 내에서 부분적으로 롤백을 수행할 수 있게 해주는 기능.
@@ -210,9 +186,6 @@ SELECT * FROM pg_trgm.show_trgm('hello');
     ROLLBACK TO SAVEPOINT savepoint_name;
     COMMIT;
     ```
-
-
----
 
 
 ### **비밀번호 해싱 (Password Hashing)**

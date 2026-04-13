@@ -8,16 +8,17 @@ slug: "/개발-설계-원칙/gof-디자인-패턴"
 ---
 
 
-### 🧠 GOF란?
-
-- **Gang of Four (4인조)**: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
-- 소프트웨어 설계에서 자주 반복되는 문제들을 해결하기 위한 **23가지 디자인 패턴**을 정리한 책 *"Design Patterns: Elements of Reusable Object-Oriented Software"*에서 유래
-- 패턴은 크게 **3가지 범주**로 분류됨:
-
----
+### 개념
 
 
-### 📦 생성 패턴 (Creational Patterns)
+> - **Gang of Four (4인조)**: Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides  
+>   
+> - 소프트웨어 설계에서 자주 반복되는 문제들을 해결하기 위한 **23가지 디자인 패턴**을 정리한 책 "Design Patterns: Elements of Reusable Object-Oriented Software"에서 유래  
+>   
+> - 패턴은 크게 **3가지 범주**로 분류됨: 생성, 구조, 행위
+
+
+### 생성 패턴 (Creational Patterns)
 
 > 객체 생성 과정을 캡슐화하고, 유연하고 재사용 가능한 객체 생성을 도와줌.
 
@@ -30,10 +31,7 @@ slug: "/개발-설계-원칙/gof-디자인-패턴"
 | **Prototype**        | 기존 객체를 복사해서 새 객체 생성     |
 
 
----
-
-
-### 🔗 구조 패턴 (Structural Patterns)
+### 구조 패턴 (Structural Patterns)
 
 > 클래스나 객체를 조합하여 더 큰 구조를 만드는 방법 제공.
 
@@ -48,10 +46,7 @@ slug: "/개발-설계-원칙/gof-디자인-패턴"
 | **Proxy**     | 대리 객체를 통해 접근 제어       |
 
 
----
-
-
-### 🤹‍♂️ 행위 패턴 (Behavioral Patterns)
+### 행위 패턴 (Behavioral Patterns)
 
 > 객체 간의 통신 방법과 책임 분배를 다룸.
 
@@ -69,10 +64,7 @@ slug: "/개발-설계-원칙/gof-디자인-패턴"
 | **Chain of Responsibility** | 요청을 처리할 수 있는 객체를 체인 형태로 연결    |
 
 
----
-
-
-### ✍️ 언제 어떤 패턴을 써야 하나?
+### 언제 어떤 패턴을 써야 하나?
 
 - 특정 문제가 반복적으로 발생할 때
 - 클래스/객체의 **결합도를 낮추고**, 유연성과 재사용성을 높이고 싶을 때

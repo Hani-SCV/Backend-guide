@@ -11,7 +11,7 @@ slug: "/python/python-기본-개념"
 ### Python과 Java 비교
 
 
-> 💡 **Python**: 간결하고 읽기 쉬운 문법으로, 줄임표나 중괄호 없이 코드 블록을 들여쓰기(인덴트)로 구분합니다. 따라서 초보자나 비개발자도 비교적 쉽게 접근할 수 있습니다.  
+> **Python**: 간결하고 읽기 쉬운 문법으로, 줄임표나 중괄호 없이 코드 블록을 들여쓰기(인덴트)로 구분합니다. 따라서 초보자나 비개발자도 비교적 쉽게 접근할 수 있습니다.  
 > **Java**: 코드가 다소 길고, 엄격한 중괄호 `{}`와 세미콜론 `;`을 요구합니다. 객체 지향 구조가 강하게 반영되어 있어, 복잡한 애플리케이션에 유리합니다.
 
 
@@ -25,18 +25,12 @@ slug: "/python/python-기본-개념"
 | **주요 활용 분야** | 데이터 과학, 웹 개발, 스크립트 | 대규모 서버, 엔터프라이즈 앱, 웹 개발 |
 
 
----
-
-
 ### Python의 주요 특징
 
 - **간결하고 읽기 쉬운 코드**: 문법이 간결해 초보자도 쉽게 배울 수 있습니다.
 - **플랫폼 독립적**: 윈도우, 맥, 리눅스 등 다양한 OS에서 실행 가능합니다.
 - **자동 메모리 관리**: 참조 카운팅과 가비지 컬렉션을 통해 메모리를 자동으로 관리합니다.
 - **광범위한 라이브러리 지원**: 데이터 분석, 웹 개발, 과학 연산 등의 분야에서 풍부한 라이브러리를 제공합니다.
-
----
-
 
 ### 기본 출력 및 입력
 
@@ -54,9 +48,6 @@ slug: "/python/python-기본-개념"
     ```
 
 
----
-
-
 ### 변수와 자료형
 
 - **변수**: 데이터를 저장하는 공간이며, `=`를 통해 값을 할당합니다.
@@ -71,9 +62,6 @@ slug: "/python/python-기본-개념"
 - **자료형**:
     - **정수(int)**, **실수(float)**, **문자열(str)**, **부울(bool)** 타입이 있으며 `type()` 함수로 확인할 수 있습니다.
 
----
-
-
 ### 자료형 변환
 
 
@@ -84,16 +72,10 @@ str(num)    # '1' (문자)
 ```
 
 
----
-
-
 ### 문자열
 
 - 문자열은 큰따옴표(`"`) 또는 작은따옴표(`'`)로 묶어서 표현합니다.
 - 여러 줄의 문자열은 따옴표 3개를 사용하여 작성합니다.
-
----
-
 
 ### 주석 및 포맷팅
 
@@ -103,9 +85,6 @@ str(num)    # '1' (문자)
     ```python
     print("My name is {} and I am {} years old.".format("Alice", 25))
     ```
-
-
----
 
 
 ### 인덱싱 및 슬라이싱
@@ -122,9 +101,6 @@ str(num)    # '1' (문자)
     ```python
     print(word[1:4])  # 'yth'
     ```
-
-
----
 
 
 ### 자료 구조
@@ -146,9 +122,6 @@ str(num)    # '1' (문자)
     ```python
     person = {"name": "Alice", "age": 25}
     ```
-
-
----
 
 
 ### 조건문과 반복문
@@ -175,9 +148,6 @@ str(num)    # '1' (문자)
     ```
 
 
----
-
-
 ### 함수(Function)
 
 - **함수 정의**: `def` 키워드를 사용하여 함수를 정의합니다. 함수명은 소문자로 작성하고, 필요한 인자는 괄호 안에 나열합니다.
@@ -188,9 +158,6 @@ def my_function(param1, param2):
 ```
 
 - **사용 이유**: 함수는 코드의 재사용성을 높이고, 모듈화하여 유지보수를 용이하게 만듭니다.
-
----
-
 
 ### 논리 연산자와 Membership 연산자
 
@@ -204,9 +171,6 @@ def my_function(param1, param2):
 - **타입 비교**:
     - `type(a) == type(b)`: 두 객체의 타입이 같은지 확인
     - `is`: 두 객체가 같은 메모리 위치를 가리키는지 확인
-
----
-
 
 ### 함수(Function) 인자
 
@@ -420,10 +384,10 @@ class Person:
     def say_hello(self):
         print("Hello!")
 
-# 클래스 자체 호출 ❌ (에러 발생)
+# 클래스 자체 호출 (에러 발생)
 # Person.say_hello()
 
-# 객체 생성 후 호출 ✅
+# 객체 생성 후 호출
 p = Person()
 p.say_hello()
 ```
@@ -439,13 +403,13 @@ class Person:
     def introduce(self):
         return f"My name is {self.name} and I am {self.age} years old."
         
-class Student(Person):  # 🔥 Person을 상속
+class Student(Person):  # Person을 상속
     def __init__(self, name, age, grade):
-        super().__init__(name, age)  # 🔥 부모(Person)의 생성자 호출
+        super().__init__(name, age)  # 부모(Person)의 생성자 호출
         self.grade = grade
 
     def introduce(self):
-        return f"{super().introduce()} I am in grade {self.grade}."  # 🔥 부모 메서드 호출 후 확장
+        return f"{super().introduce()} I am in grade {self.grade}."  # 부모 메서드 호출 후 확장
         
 student = Student("Bob", 16, 10)
 print(student.introduce())  

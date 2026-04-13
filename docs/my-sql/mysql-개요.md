@@ -5,13 +5,13 @@ slug: "/my-sql/mysql-개요"
 ---
 
 
-### 🧐 **MySQL이란?**
-
-
-> 💡 **MySQL**은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)으로, SQL을 사용하여 데이터를 테이블 형식으로 저장하고 관리하는 시스템입니다.
-
-
 ---
+
+
+### 개념
+
+
+> **MySQL**은 오픈 소스 관계형 데이터베이스 관리 시스템(RDBMS)으로, SQL을 사용하여 데이터를 테이블 형식으로 저장하고 관리하는 시스템입니다.
 
 
 ### **MySQL의 주요 특징**
@@ -45,16 +45,10 @@ slug: "/my-sql/mysql-개요"
     InnoDB, MyISAM, MEMORY 등 여러 엔진을 선택하여 사용할 수 있습니다.
 
 
----
-
-
 ### **MySQL의 역사**
 
 - **1995년**: Michael "Monty" Widenius와 David Axmark가 MySQL을 개발.
 - **Oracle 인수**: 2008년, Oracle이 MySQL을 인수하면서 더욱 발전함.
-
----
-
 
 ### **MySQL의 주요 구성 요소**
 
@@ -75,10 +69,7 @@ slug: "/my-sql/mysql-개요"
     데이터를 저장하는 구조로, 행(Row)과 열(Column)로 구성됩니다.
 
 
----
-
-
-### 📝 **MySQL과 다른 관계형 데이터베이스와의 차이점**
+### **MySQL과 다른 관계형 데이터베이스와의 차이점**
 
 
 ### **1. MySQL vs PostgreSQL**

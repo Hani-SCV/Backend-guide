@@ -5,6 +5,9 @@ slug: "/postgresql/postgresql-소개"
 ---
 
 
+---
+
+
 ### **PostgreSQL 개요**
 
 - **PostgreSQL**은 객체 관계형 데이터베이스 관리 시스템(ORDBMS)으로, 오픈소스이며 고급 기능과 확장성, 안정성으로 유명함.
@@ -19,9 +22,6 @@ slug: "/postgresql/postgresql-소개"
 - **MVCC**(Multi-Version Concurrency Control): 다중 사용자가 동시에 데이터에 접근할 수 있도록 처리.
 - **확장성**: 사용자 정의 함수, 타입, 연산자 등을 추가하여 기능을 확장할 수 있음.
 
----
-
-
 ### **PostgreSQL 설치 및 설정**
 
 1. **설치**
@@ -32,9 +32,6 @@ slug: "/postgresql/postgresql-소개"
     - **pgAdmin**: GUI 도구인 pgAdmin을 사용해 데이터베이스를 관리할 수 있음.
     - **CLI 도구**: `psql`을 통해 명령줄에서 데이터베이스를 관리하고 쿼리를 실행할 수 있음.
 
----
-
-
 ### **PostgreSQL의 기본 구조**
 
 - **클러스터**: 하나의 PostgreSQL 서버 인스턴스.
@@ -42,14 +39,8 @@ slug: "/postgresql/postgresql-소개"
 - **스키마**: 데이터베이스 내에서 테이블, 뷰 등을 그룹화하는 논리적 구조.
 - **테이블**: 데이터를 저장하는 기본적인 구조.
 
----
-
-
 ### **PostgreSQL 아키텍처**
 
 - **프로세스 구조**: PostgreSQL은 서버-클라이언트 구조를 따르며, 클라이언트는 쿼리를 보내고, 서버는 이를 처리.
 - **WAL (Write-Ahead Logging)**: 데이터 변경 전에 로그를 기록하여 안정성을 보장.
 - **버퍼 캐시**: 디스크 I/O를 줄이고 성능을 향상시키기 위해 메모리에 데이터를 캐싱.
-
----
-

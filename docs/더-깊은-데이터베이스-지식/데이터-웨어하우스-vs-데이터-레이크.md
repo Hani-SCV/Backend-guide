@@ -18,9 +18,6 @@ slug: "/더-깊은-데이터베이스-지식/데이터-웨어하우스-vs-데이
     - OLAP, BI 시스템 중심
     - 예시: Snowflake, Amazon Redshift, Google BigQuery
 
----
-
-
 ### 데이터 레이크 (Data Lake)
 
 - 정형·비정형 데이터 원시 저장
@@ -30,9 +27,6 @@ slug: "/더-깊은-데이터베이스-지식/데이터-웨어하우스-vs-데이
     - 읽기 시 스키마 적용 (Schema-on-read)
     - 데이터 과학·머신러닝 워크로드에 최적
     - 예시: AWS S3 + EMR, Azure Data Lake, Hadoop HDFS
-
----
-
 
 ### 비교
 
@@ -47,16 +41,10 @@ slug: "/더-깊은-데이터베이스-지식/데이터-웨어하우스-vs-데이
 | 주요 용도  | OLAP, 비즈니스 인텔리전스       | 데이터 과학, 빅데이터 분석       |
 
 
----
-
-
 ### 하이브리드 접근: 데이터 레이크하우스
 
 - 웨어하우스의 관리·쿼리 성능과 레이크의 유연성 결합
 - Delta Lake, Apache Iceberg, Databricks Lakehouse 등 솔루션
-
----
-
 
 ### Tip
 

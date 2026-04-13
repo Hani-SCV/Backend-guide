@@ -5,10 +5,10 @@ slug: "/nosql-mongodb/mongodb와-연결된-기술"
 ---
 
 
-> 💡 MongoDB는 다양한 기술과 도구들과 함께 사용되어 그 효율성을 극대화할 수 있습니다. 이 챕터에서는 MongoDB와 자주 함께 사용되는 기술들을 소개하고, 이를 통해 MongoDB의 활용 범위를 확장할 수 있는 방법을 다룹니다.
-
-
 ---
+
+
+> MongoDB는 다양한 기술과 도구들과 함께 사용되어 그 효율성을 극대화할 수 있습니다. 이 챕터에서는 MongoDB와 자주 함께 사용되는 기술들을 소개하고, 이를 통해 MongoDB의 활용 범위를 확장할 수 있는 방법을 다룹니다.
 
 
 ### **MongoDB와 함께 사용되는 주요 기술**
@@ -54,9 +54,6 @@ slug: "/nosql-mongodb/mongodb와-연결된-기술"
         - 복잡한 그룹화 및 집계 작업
         - 파이프라인 기반 데이터 처리
 
----
-
-
 ### **MongoDB와 함께 사용되는 다양한 도구 및 기술**
 
 
@@ -64,7 +61,7 @@ slug: "/nosql-mongodb/mongodb와-연결된-기술"
 
 - **Apache Kafka**는 실시간 데이터 스트리밍 플랫폼으로, MongoDB와 연동하여 대규모 데이터를 실시간으로 처리할 수 있습니다. MongoDB에 저장된 데이터를 Apache Kafka로 스트리밍하고, 이를 다른 시스템으로 전달하는 데 사용할 수 있습니다.
 
-### 2. **Elasticsearch**
+    ### 2. **Elasticsearch**
 
 - **Elasticsearch**는 강력한 검색 엔진으로, MongoDB와 결합하여 복잡한 검색 및 분석 기능을 제공합니다. MongoDB 데이터를 Elasticsearch로 인덱싱하여 빠른 검색을 지원할 수 있습니다.
 
@@ -75,9 +72,6 @@ slug: "/nosql-mongodb/mongodb와-연결된-기술"
 ### 4. **Apache Spark**
 
 - **Apache Spark**는 대규모 데이터 처리 프레임워크로, MongoDB와 함께 사용하여 대규모 데이터를 분산 처리하고 분석할 수 있습니다. MongoDB 데이터를 Apache Spark로 불러와 병렬 처리하고, 이를 다양한 분석 작업에 활용할 수 있습니다.
-
----
-
 
 ### **MongoDB와 연결된 기술의 장점**
 

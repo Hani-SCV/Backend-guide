@@ -5,12 +5,15 @@ slug: "/api/json-api"
 ---
 
 
-> 💡 - JSON API는 RESTful API 구현을 위한 표준 사양  
+---
+
+
+## 개념 
+
+
+> - JSON API는 RESTful API 구현을 위한 표준 사양  
 >   
 > - 목표: 클라이언트·서버 간 데이터 교환에 일관된 구조와 규칙 제공
-
-
----
 
 
 ### 주요 원칙
@@ -20,9 +23,6 @@ slug: "/api/json-api"
 3. 최상위 키로 `data` / `errors` / `meta` / `links` / `included` 허용
 4. 리소스 간 관계는 `relationships` 블록에 명시
 5. 연관 리소드를 포함하려면 `included` 배열 사용
-
----
-
 
 ### 리소스 객체 구조 예시
 
@@ -51,9 +51,6 @@ slug: "/api/json-api"
   }
 }
 ```
-
-
----
 
 
 ### 요청·응답 예시
@@ -97,9 +94,6 @@ slug: "/api/json-api"
     ```
 
 
----
-
-
 ### 페이징·필터링·정렬 예시
 
 - 페이징
@@ -135,9 +129,6 @@ slug: "/api/json-api"
     ```
 
 
----
-
-
 ### 포함(include) 예시
 
 
@@ -158,9 +149,6 @@ GET /articles?include=author,comments.author
 ```
 
 
----
-
-
 ### 에러 처리 예시
 
 
@@ -177,9 +165,6 @@ GET /articles?include=author,comments.author
   ]
 }
 ```
-
-
----
 
 
 ### 추가 보완 포인트

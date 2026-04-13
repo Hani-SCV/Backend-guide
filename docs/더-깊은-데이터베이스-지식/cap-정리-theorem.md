@@ -15,9 +15,6 @@ slug: "/더-깊은-데이터베이스-지식/cap-정리-theorem"
     2. 가용성 (A)
     3. 파티션 내구성 (P)
 
----
-
-
 ### 세 가지 특성
 
 - 일관성 (Consistency)
@@ -33,9 +30,6 @@ slug: "/더-깊은-데이터베이스-지식/cap-정리-theorem"
     네트워크 분할(장애) 발생 시에도 시스템 작동 유지
 
 
----
-
-
 ### 조합 유형
 
 
@@ -46,17 +40,11 @@ slug: "/더-깊은-데이터베이스-지식/cap-정리-theorem"
 | CA | 일관성+가용성 | 분할 상황에서 작동 불가(단일 노드 수준)  |
 
 
----
-
-
 ### 대표 시스템 예시
 
 - CP: Zookeeper, HBase
 - AP: Cassandra, Couchbase, DynamoDB
 - CA: 단일 노드 RDBMS(분산 없음)
-
----
-
 
 ### 현실 적용과 한계
 
@@ -64,17 +52,7 @@ slug: "/더-깊은-데이터베이스-지식/cap-정리-theorem"
 - 대부분 P를 기본으로 하며 C 와 A 간 **타협**
 - **Eventual Consistency**(최종적 일관성) 모델로 일관성 지연 수용
 
----
-
-
 ### 확장 개념: PACELC
 
 - 분할(Partition) 외에도 **지연(Latency) vs 일관성(Consistency)** 간 트레이드오프
 - P (분할) 시 A vs C, Else(정상 상태) L vs C 결정
-
----
-
-
-### 핵심 키워드
-
-> CAP, 일관성, 가용성, 파티션 내구성, CP, AP, CA, 최종적 일관성, PACELC

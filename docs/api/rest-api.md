@@ -8,14 +8,14 @@ slug: "/api/rest-api"
 ---
 
 
-> 💡 - REST(Representational State Transfer) 는 웹 아키텍처 스타일  
+### 개념
+
+
+> - REST(Representational State Transfer) 는 웹 아키텍처 스타일  
 >   
 > - 리소스를 URI 로 표현하고 HTTP 메서드로 상태를 조작  
 >   
 > - 목표: 단순성, 확장성, 유연성
-
-
----
 
 
 ### 핵심 제약 조건
@@ -26,9 +26,6 @@ slug: "/api/rest-api"
 4. Uniform Interface: 일관된 인터페이스
 5. Layered System: 계층화된 시스템 구조 허용
 6. Code on Demand (선택): 클라이언트 실행 코드 전송 허용
-
----
-
 
 ### HTTP 메서드 매핑
 
@@ -42,9 +39,6 @@ slug: "/api/rest-api"
 | DELETE | 삭제    | O   |
 
 
----
-
-
 ### URI 설계 원칙
 
 - 리소스는 명사로: `/users, /orders/123`
@@ -55,17 +49,11 @@ slug: "/api/rest-api"
     GET `/products?category=books&sort=-price&page=2&size=20`
 
 
----
-
-
 ### HTTP 상태 코드
 
 - 2xx: 성공 (200 OK, 201 Created, 204 No Content)
 - 4xx: 클라이언트 오류 (400 Bad Request, 401 Unauthorized, 404 Not Found)
 - 5xx: 서버 오류 (500 Internal Server Error, 503 Service Unavailable)
-
----
-
 
 ### 에러 응답 표준
 
@@ -82,9 +70,6 @@ slug: "/api/rest-api"
   }
 }
 ```
-
-
----
 
 
 ### 페이징 메타데이터
@@ -109,9 +94,6 @@ slug: "/api/rest-api"
 ```
 
 
----
-
-
 ### HATEOAS
 
 - 응답에 하이퍼링크 제공
@@ -129,9 +111,6 @@ slug: "/api/rest-api"
 ```
 
 
----
-
-
 ### 버전 관리 · 보안 · 품질
 
 - 버전 관리
@@ -143,9 +122,6 @@ slug: "/api/rest-api"
 - HTTPS 사용으로 전송 암호화
 - CORS 설정으로 도메인 접근 제어
 - Idempotency-Key 헤더로 중복 요청 방지
-
----
-
 
 ### 문서화·테스트·모니터링
 
