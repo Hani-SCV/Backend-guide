@@ -32,8 +32,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "hani"
+          git config --global user.email "gim325901@gmail.com"
           
           git add docs/
           if ! git diff --cached --quiet; then
